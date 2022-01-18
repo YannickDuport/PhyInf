@@ -1,0 +1,19 @@
+Alignment sites: 100478
+Alignment has 97229 distinct alignment patterns
+Proportion of gaps and completely undetermined characters in this alignment: 35.68%
+Partition: 0
+Alignment Patterns: 97229
+DataType: DNA
+Substitution Matrix: GTR
+alpha: 8.212688
+Tree-Length: 2.582879
+rate A <-> C: 0.987746
+rate A <-> G: 3.496312
+rate A <-> T: 1.146252
+rate C <-> G: 0.771250
+rate C <-> T: 3.401730
+rate G <-> T: 1.000000
+freq pi(A): 0.243562
+freq pi(C): 0.264550
+freq pi(G): 0.251256
+freq pi(T): 0.240632
