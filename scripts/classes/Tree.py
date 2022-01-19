@@ -22,7 +22,7 @@ class Tree:
         self.bases = list(self.map.keys())  # the bases
         self.ParsimonyScore = 0
         self.LogLikelihood = 0
-        self.n = sequence_length  # length of the sequences to be evolved
+        self.n = sequence_length  # length of the sequences_mini to be evolved
 
     def AddVertex(self, vertex):
         if vertex in self.nodes:
@@ -130,7 +130,11 @@ class Tree:
             match = re.search(rx, newick_string)  # match the string to the regular expression
             string_match = match.group()  # get the match as a string
             siblings = string_match[1:-1]  # remove the two brackets ( and ) --> get the siblings
-            print(siblings)
+            if len(siblings.split(',')) == 3:
+                # In some trees the root has three children. Group two together and add a new parent with distance 0
+                to_replace = ','.join(siblings.split(',')[:2])
+                newick_string = newick_string.replace(to_replace, f"({to_replace}):0")
+                continue
             left, right = siblings.split(",")  # split into the left and right half
             left_name, left_distance = left.split(
                 ":")  # split into the name of the left child and its distance to the parent
@@ -222,7 +226,7 @@ class Tree:
 
     def FitchHartigan(self, site):
         """
-        performs the fitch hartigan algorithm for one site of the sequences
+        performs the fitch hartigan algorithm for one site of the sequences_mini
         Paramters:
         ----------
         site int
@@ -262,7 +266,7 @@ class Tree:
         self.SetLeaves()
         self.SetRoot()
         self.SetVerticesForPostOrderTraversal()
-        n = len(self.nodes[self.leaves[0]].sequence)  # length of leaf sequences
+        n = len(self.nodes[self.leaves[0]].sequence)  # length of leaf sequences_mini
         parsimony_scores = []
         for i in range(n):  # go through each site
             # do fitch for the site
