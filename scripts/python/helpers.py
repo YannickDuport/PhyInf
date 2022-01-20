@@ -1,5 +1,11 @@
-import pandas as pd
-from pathlib import Path, PosixPath
+import networkx as nx
+import numpy as np
+import matplotlib.pyplot as plt
+
+from pathlib import PosixPath
+
+
+# currently not used
 def create_parameter_file(tree_path: PosixPath, out_path: PosixPath):
     """ Reads all files containing model parameters (log_0.txt) from a given path.
     Parameters are stored in a txt-file in the format:
@@ -49,5 +55,21 @@ def create_parameter_file(tree_path: PosixPath, out_path: PosixPath):
                 out.write(line)
 
 
+def compute_jc_distance(seq1, seq2):
+    # compute hamming distance between seq1 and seq2
+    hamming_dist = sum(ch1 != ch2 for ch1, ch2 in zip(seq1, seq2)) / len(seq1)
 
+    # compute jc corrected distance
+    if hamming_dist >= 0.75:
+      return np.inf
+    else:
+      return -3/4 * np.log(1 - 4/3 * hamming_dist)
+
+def draw_network(graph):
+    fig = plt.figure()
+    pos = nx.spring_layout(graph)
+    nx.draw(graph, pos)
+    nx.draw_networkx_labels(graph, pos)
+    nx.draw_networkx_edge_labels(graph, pos)
+    fig.show()
 
