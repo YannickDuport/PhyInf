@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# usage: ./generate_sequences.sh <PATH_TO_DATA> <PATH_TO_OUTDIR> <SEQUENCE_LENGTHS> <PATH_TO_SEQGEN>
+# SEQUENCE_LENGTHS should be comma separated. E.g. 10,100,1000
+# PATH_TO_SEQGEN is the path to the file 'seq-gen'
+
 PATH_TO_DATA=$1
 PATH_TO_OUTDIR=$2
 IFS=',' read -ra SEQ_LENGTHS <<< $3
