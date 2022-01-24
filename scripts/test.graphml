@@ -1,0 +1,689 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="double" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="graph" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="taxon1" />
+    <node id="taxon2" />
+    <node id="taxon3" />
+    <node id="taxon4" />
+    <node id="taxon5" />
+    <node id="taxon6" />
+    <node id="taxon7" />
+    <node id="taxon8" />
+    <node id="taxon9" />
+    <node id="taxon10" />
+    <node id="taxon11" />
+    <node id="taxon12" />
+    <node id="taxon13" />
+    <node id="taxon14" />
+    <node id="taxon15" />
+    <node id="taxon16" />
+    <node id="taxon17" />
+    <node id="taxon18" />
+    <node id="taxon19" />
+    <node id="taxon20" />
+    <node id="taxon21" />
+    <node id="taxon22" />
+    <node id="taxon23" />
+    <node id="taxon24" />
+    <node id="taxon25" />
+    <node id="taxon26" />
+    <node id="taxon27" />
+    <node id="taxon28" />
+    <node id="taxon29" />
+    <node id="taxon30" />
+    <node id="taxon31" />
+    <node id="taxon32" />
+    <node id="taxon33" />
+    <node id="taxon34" />
+    <node id="taxon35" />
+    <node id="taxon36" />
+    <node id="taxon37" />
+    <node id="taxon38" />
+    <node id="taxon39" />
+    <node id="taxon40" />
+    <node id="taxon41" />
+    <node id="taxon42" />
+    <node id="taxon43" />
+    <node id="taxon44" />
+    <node id="taxon45" />
+    <node id="taxon46" />
+    <node id="taxon47" />
+    <node id="taxon48" />
+    <node id="taxon49" />
+    <node id="taxon50" />
+    <node id="taxon51" />
+    <node id="taxon52" />
+    <node id="taxon53" />
+    <node id="taxon54" />
+    <node id="taxon55" />
+    <node id="taxon56" />
+    <node id="taxon57" />
+    <node id="taxon58" />
+    <node id="taxon59" />
+    <node id="taxon60" />
+    <node id="taxon61" />
+    <node id="taxon62" />
+    <node id="taxon63" />
+    <node id="taxon64" />
+    <node id="taxon65" />
+    <node id="taxon66" />
+    <node id="taxon67" />
+    <node id="taxon68" />
+    <node id="taxon69" />
+    <node id="taxon70" />
+    <node id="taxon71" />
+    <node id="taxon72" />
+    <node id="taxon73" />
+    <node id="taxon74" />
+    <node id="taxon75" />
+    <node id="taxon76" />
+    <node id="taxon77" />
+    <node id="taxon78" />
+    <node id="taxon79" />
+    <node id="taxon80" />
+    <node id="taxon81" />
+    <node id="taxon82" />
+    <node id="taxon83" />
+    <node id="taxon84" />
+    <node id="taxon85" />
+    <node id="taxon86" />
+    <node id="taxon87" />
+    <node id="taxon88" />
+    <node id="taxon89" />
+    <node id="taxon90" />
+    <node id="taxon91" />
+    <node id="taxon92" />
+    <node id="taxon93" />
+    <node id="taxon94" />
+    <node id="taxon95" />
+    <node id="taxon96" />
+    <node id="taxon97" />
+    <node id="taxon98" />
+    <node id="taxon99" />
+    <node id="taxon100" />
+    <node id="taxon101" />
+    <node id="taxon102" />
+    <node id="taxon103" />
+    <node id="taxon104" />
+    <node id="taxon105" />
+    <node id="taxon106" />
+    <node id="taxon107" />
+    <node id="taxon108" />
+    <node id="taxon109" />
+    <node id="taxon110" />
+    <node id="taxon111" />
+    <node id="taxon112" />
+    <node id="taxon113" />
+    <node id="taxon114" />
+    <node id="taxon115" />
+    <node id="taxon116" />
+    <node id="taxon117" />
+    <node id="taxon118" />
+    <node id="taxon119" />
+    <node id="taxon120" />
+    <node id="taxon121" />
+    <node id="taxon122" />
+    <node id="taxon123" />
+    <node id="taxon124" />
+    <node id="taxon125" />
+    <node id="taxon126" />
+    <node id="taxon127" />
+    <node id="taxon128" />
+    <node id="taxon129" />
+    <node id="taxon130" />
+    <node id="taxon131" />
+    <node id="taxon132" />
+    <node id="taxon133" />
+    <node id="taxon134" />
+    <node id="taxon135" />
+    <node id="taxon136" />
+    <node id="taxon137" />
+    <node id="taxon138" />
+    <node id="taxon139" />
+    <node id="taxon140" />
+    <node id="taxon141" />
+    <node id="taxon142" />
+    <node id="taxon143" />
+    <node id="taxon144" />
+    <node id="taxon145" />
+    <node id="taxon146" />
+    <node id="taxon147" />
+    <node id="taxon148" />
+    <node id="taxon149" />
+    <node id="taxon150" />
+    <node id="taxon151" />
+    <node id="taxon152" />
+    <node id="taxon153" />
+    <node id="taxon154" />
+    <node id="taxon155" />
+    <node id="taxon156" />
+    <node id="taxon157" />
+    <node id="taxon158" />
+    <node id="taxon159" />
+    <node id="taxon160" />
+    <node id="taxon161" />
+    <node id="taxon162" />
+    <node id="taxon163" />
+    <node id="taxon164" />
+    <node id="taxon165" />
+    <node id="taxon166" />
+    <node id="taxon167" />
+    <node id="taxon168" />
+    <node id="taxon169" />
+    <node id="taxon170" />
+    <node id="taxon171" />
+    <edge source="taxon1" target="taxon171">
+      <data key="d1">0.03406189764786193</data>
+    </edge>
+    <edge source="taxon2" target="taxon3">
+      <data key="d1">0.07139264025281167</data>
+    </edge>
+    <edge source="taxon3" target="taxon171">
+      <data key="d1">0.29116106602622754</data>
+    </edge>
+    <edge source="taxon3" target="taxon4">
+      <data key="d1">0.010878514652161267</data>
+    </edge>
+    <edge source="taxon4" target="taxon5">
+      <data key="d1">0.01138599149674804</data>
+    </edge>
+    <edge source="taxon6" target="taxon7">
+      <data key="d1">0.17476916337649526</data>
+    </edge>
+    <edge source="taxon6" target="taxon8">
+      <data key="d1">0.3596567336283601</data>
+    </edge>
+    <edge source="taxon8" target="taxon9">
+      <data key="d1">0.255460601841411</data>
+    </edge>
+    <edge source="taxon8" target="taxon14">
+      <data key="d1">0.26025565390244676</data>
+    </edge>
+    <edge source="taxon9" target="taxon11">
+      <data key="d1">0.011995417315762126</data>
+    </edge>
+    <edge source="taxon9" target="taxon12">
+      <data key="d1">0.06799077620109813</data>
+    </edge>
+    <edge source="taxon9" target="taxon13">
+      <data key="d1">0.24707281637412504</data>
+    </edge>
+    <edge source="taxon10" target="taxon11">
+      <data key="d1">0.0060241287729482</data>
+    </edge>
+    <edge source="taxon14" target="taxon15">
+      <data key="d1">0.059932037421226436</data>
+    </edge>
+    <edge source="taxon14" target="taxon171">
+      <data key="d1">0.29842038195888476</data>
+    </edge>
+    <edge source="taxon14" target="taxon23">
+      <data key="d1">0.4140830163372367</data>
+    </edge>
+    <edge source="taxon16" target="taxon20">
+      <data key="d1">0.2084638408569035</data>
+    </edge>
+    <edge source="taxon17" target="taxon20">
+      <data key="d1">0.15816424043903074</data>
+    </edge>
+    <edge source="taxon17" target="taxon18">
+      <data key="d1">0.057336879122554696</data>
+    </edge>
+    <edge source="taxon19" target="taxon20">
+      <data key="d1">0.0015015020030048096</data>
+    </edge>
+    <edge source="taxon19" target="taxon21">
+      <data key="d1">0.0015015020030048096</data>
+    </edge>
+    <edge source="taxon20" target="taxon22">
+      <data key="d1">0.2812019273050061</data>
+    </edge>
+    <edge source="taxon22" target="taxon23">
+      <data key="d1">0.30815980560724743</data>
+    </edge>
+    <edge source="taxon23" target="taxon24">
+      <data key="d1">0.4061354644285802</data>
+    </edge>
+    <edge source="taxon24" target="taxon25">
+      <data key="d1">0.6313514099125618</data>
+    </edge>
+    <edge source="taxon24" target="taxon26">
+      <data key="d1">0.6313514099125618</data>
+    </edge>
+    <edge source="taxon27" target="taxon28">
+      <data key="d1">0.0526022866417728</data>
+    </edge>
+    <edge source="taxon28" target="taxon58">
+      <data key="d1">0.38545618833318607</data>
+    </edge>
+    <edge source="taxon28" target="taxon35">
+      <data key="d1">0.4643651254887142</data>
+    </edge>
+    <edge source="taxon29" target="taxon35">
+      <data key="d1">0.7082604972425103</data>
+    </edge>
+    <edge source="taxon29" target="taxon30">
+      <data key="d1">0.03427121944659716</data>
+    </edge>
+    <edge source="taxon29" target="taxon32">
+      <data key="d1">0.1041018021603441</data>
+    </edge>
+    <edge source="taxon31" target="taxon32">
+      <data key="d1">0.1474979388823733</data>
+    </edge>
+    <edge source="taxon32" target="taxon33">
+      <data key="d1">0.00814405750115696</data>
+    </edge>
+    <edge source="taxon34" target="taxon35">
+      <data key="d1">0.49837120349008723</data>
+    </edge>
+    <edge source="taxon35" target="taxon36">
+      <data key="d1">0.49546159166809534</data>
+    </edge>
+    <edge source="taxon36" target="taxon37">
+      <data key="d1">0.7123856365522483</data>
+    </edge>
+    <edge source="taxon37" target="taxon38">
+      <data key="d1">0.6051289487348064</data>
+    </edge>
+    <edge source="taxon38" target="taxon39">
+      <data key="d1">0.00915565733080867</data>
+    </edge>
+    <edge source="taxon38" target="taxon41">
+      <data key="d1">0.010168623449138122</data>
+    </edge>
+    <edge source="taxon38" target="taxon40">
+      <data key="d1">0.011284468653953437</data>
+    </edge>
+    <edge source="taxon38" target="taxon50">
+      <data key="d1">0.1470111629444678</data>
+    </edge>
+    <edge source="taxon42" target="taxon43">
+      <data key="d1">0.1736338507385448</data>
+    </edge>
+    <edge source="taxon43" target="taxon50">
+      <data key="d1">0.12767617174410573</data>
+    </edge>
+    <edge source="taxon43" target="taxon47">
+      <data key="d1">0.11451381574923622</data>
+    </edge>
+    <edge source="taxon43" target="taxon46">
+      <data key="d1">0.2707991406086099</data>
+    </edge>
+    <edge source="taxon44" target="taxon45">
+      <data key="d1">0.07238317528563279</data>
+    </edge>
+    <edge source="taxon45" target="taxon46">
+      <data key="d1">0.2042503466287361</data>
+    </edge>
+    <edge source="taxon47" target="taxon49">
+      <data key="d1">0.021711241466919502</data>
+    </edge>
+    <edge source="taxon48" target="taxon49">
+      <data key="d1">0.014234224948352142</data>
+    </edge>
+    <edge source="taxon50" target="taxon51">
+      <data key="d1">0.10066300658985614</data>
+    </edge>
+    <edge source="taxon52" target="taxon57">
+      <data key="d1">0.3090652383127884</data>
+    </edge>
+    <edge source="taxon52" target="taxon53">
+      <data key="d1">0.06985440355771763</data>
+    </edge>
+    <edge source="taxon54" target="taxon55">
+      <data key="d1">0.036262695705785046</data>
+    </edge>
+    <edge source="taxon54" target="taxon56">
+      <data key="d1">0.3011048151289702</data>
+    </edge>
+    <edge source="taxon55" target="taxon57">
+      <data key="d1">0.30095542761727223</data>
+    </edge>
+    <edge source="taxon57" target="taxon58">
+      <data key="d1">0.35884950074449096</data>
+    </edge>
+    <edge source="taxon58" target="taxon171">
+      <data key="d1">0.36908468612537737</data>
+    </edge>
+    <edge source="taxon59" target="taxon60">
+      <data key="d1">0.06700602151881034</data>
+    </edge>
+    <edge source="taxon59" target="taxon131">
+      <data key="d1">0.21403022088775794</data>
+    </edge>
+    <edge source="taxon59" target="taxon161">
+      <data key="d1">0.37714309058761036</data>
+    </edge>
+    <edge source="taxon60" target="taxon171">
+      <data key="d1">0.2885119266942268</data>
+    </edge>
+    <edge source="taxon60" target="taxon62">
+      <data key="d1">0.0014013082950206615</data>
+    </edge>
+    <edge source="taxon60" target="taxon63">
+      <data key="d1">0.27989366066840154</data>
+    </edge>
+    <edge source="taxon61" target="taxon62">
+      <data key="d1">0.0014013082950206615</data>
+    </edge>
+    <edge source="taxon63" target="taxon67">
+      <data key="d1">0.2667922621600127</data>
+    </edge>
+    <edge source="taxon64" target="taxon65">
+      <data key="d1">0.002203232990507093</data>
+    </edge>
+    <edge source="taxon65" target="taxon67">
+      <data key="d1">0.0012009610252304093</data>
+    </edge>
+    <edge source="taxon66" target="taxon67">
+      <data key="d1">0.0012009610252304093</data>
+    </edge>
+    <edge source="taxon68" target="taxon70">
+      <data key="d1">0.22232351031303146</data>
+    </edge>
+    <edge source="taxon68" target="taxon69">
+      <data key="d1">0.08224955066582695</data>
+    </edge>
+    <edge source="taxon70" target="taxon131">
+      <data key="d1">0.20149804996201431</data>
+    </edge>
+    <edge source="taxon70" target="taxon106">
+      <data key="d1">0.041000551006731153</data>
+    </edge>
+    <edge source="taxon70" target="taxon108">
+      <data key="d1">0.1904598453519411</data>
+    </edge>
+    <edge source="taxon70" target="taxon119">
+      <data key="d1">0.2330253987478061</data>
+    </edge>
+    <edge source="taxon71" target="taxon106">
+      <data key="d1">0.03228501715677473</data>
+    </edge>
+    <edge source="taxon71" target="taxon73">
+      <data key="d1">0.02366960168082445</data>
+    </edge>
+    <edge source="taxon71" target="taxon72">
+      <data key="d1">0.025322722614606837</data>
+    </edge>
+    <edge source="taxon71" target="taxon89">
+      <data key="d1">0.038049036305080004</data>
+    </edge>
+    <edge source="taxon71" target="taxon74">
+      <data key="d1">0.060907541569157383</data>
+    </edge>
+    <edge source="taxon75" target="taxon89">
+      <data key="d1">0.03962876026200097</data>
+    </edge>
+    <edge source="taxon75" target="taxon76">
+      <data key="d1">0.0035081921633333176</data>
+    </edge>
+    <edge source="taxon76" target="taxon84">
+      <data key="d1">0.00130112797028747</data>
+    </edge>
+    <edge source="taxon76" target="taxon80">
+      <data key="d1">0.0016017090978161707</data>
+    </edge>
+    <edge source="taxon76" target="taxon81">
+      <data key="d1">0.0016017090978161707</data>
+    </edge>
+    <edge source="taxon77" target="taxon80">
+      <data key="d1">0.0032068461470914126</data>
+    </edge>
+    <edge source="taxon78" target="taxon80">
+      <data key="d1">0.0032068461470914126</data>
+    </edge>
+    <edge source="taxon79" target="taxon80">
+      <data key="d1">0.0032068461470914126</data>
+    </edge>
+    <edge source="taxon80" target="taxon82">
+      <data key="d1">0.0017019295830324377</data>
+    </edge>
+    <edge source="taxon83" target="taxon84">
+      <data key="d1">0.00130112797028747</data>
+    </edge>
+    <edge source="taxon85" target="taxon89">
+      <data key="d1">0.04301000013941455</data>
+    </edge>
+    <edge source="taxon86" target="taxon87">
+      <data key="d1">0.006931936025199408</data>
+    </edge>
+    <edge source="taxon87" target="taxon89">
+      <data key="d1">0.025219295737245122</data>
+    </edge>
+    <edge source="taxon87" target="taxon88">
+      <data key="d1">0.021711241466919502</data>
+    </edge>
+    <edge source="taxon89" target="taxon91">
+      <data key="d1">0.015356139892039145</data>
+    </edge>
+    <edge source="taxon89" target="taxon98">
+      <data key="d1">0.018526959480278857</data>
+    </edge>
+    <edge source="taxon89" target="taxon92">
+      <data key="d1">0.025322722614606837</data>
+    </edge>
+    <edge source="taxon89" target="taxon94">
+      <data key="d1">0.032076248888203374</data>
+    </edge>
+    <edge source="taxon89" target="taxon105">
+      <data key="d1">0.03647263272605012</data>
+    </edge>
+    <edge source="taxon90" target="taxon91">
+      <data key="d1">0.015356139892039145</data>
+    </edge>
+    <edge source="taxon92" target="taxon93">
+      <data key="d1">0.025219295737245122</data>
+    </edge>
+    <edge source="taxon95" target="taxon98">
+      <data key="d1">0.0005001667407778257</data>
+    </edge>
+    <edge source="taxon95" target="taxon96">
+      <data key="d1">0.0019024107389977102</data>
+    </edge>
+    <edge source="taxon95" target="taxon97">
+      <data key="d1">0.0019024107389977102</data>
+    </edge>
+    <edge source="taxon99" target="taxon103">
+      <data key="d1">0.026564958923445244</data>
+    </edge>
+    <edge source="taxon100" target="taxon103">
+      <data key="d1">0.026564958923445244</data>
+    </edge>
+    <edge source="taxon101" target="taxon103">
+      <data key="d1">0.026564958923445244</data>
+    </edge>
+    <edge source="taxon102" target="taxon103">
+      <data key="d1">0.026564958923445244</data>
+    </edge>
+    <edge source="taxon103" target="taxon105">
+      <data key="d1">0.03531870565038793</data>
+    </edge>
+    <edge source="taxon104" target="taxon105">
+      <data key="d1">0.0028052397117924693</data>
+    </edge>
+    <edge source="taxon107" target="taxon108">
+      <data key="d1">0.002203232990507093</data>
+    </edge>
+    <edge source="taxon107" target="taxon118">
+      <data key="d1">0.16910970833381817</data>
+    </edge>
+    <edge source="taxon108" target="taxon109">
+      <data key="d1">0.00040010670460780874</data>
+    </edge>
+    <edge source="taxon108" target="taxon111">
+      <data key="d1">0.002403848211711252</data>
+    </edge>
+    <edge source="taxon109" target="taxon110">
+      <data key="d1">0.00040010670460780874</data>
+    </edge>
+    <edge source="taxon112" target="taxon113">
+      <data key="d1">0.10089176974551115</data>
+    </edge>
+    <edge source="taxon113" target="taxon118">
+      <data key="d1">0.2828040252052099</data>
+    </edge>
+    <edge source="taxon113" target="taxon114">
+      <data key="d1">0.042798225466258236</data>
+    </edge>
+    <edge source="taxon115" target="taxon116">
+      <data key="d1">0.008953228179782224</data>
+    </edge>
+    <edge source="taxon116" target="taxon118">
+      <data key="d1">0.09281310557713127</data>
+    </edge>
+    <edge source="taxon116" target="taxon117">
+      <data key="d1">0.0060241287729482</data>
+    </edge>
+    <edge source="taxon119" target="taxon120">
+      <data key="d1">0.00130112797028747</data>
+    </edge>
+    <edge source="taxon119" target="taxon123">
+      <data key="d1">0.19200836620486997</data>
+    </edge>
+    <edge source="taxon121" target="taxon123">
+      <data key="d1">0.10341278052253977</data>
+    </edge>
+    <edge source="taxon122" target="taxon123">
+      <data key="d1">0.0017019295830324377</data>
+    </edge>
+    <edge source="taxon123" target="taxon124">
+      <data key="d1">0.0031064243755013444</data>
+    </edge>
+    <edge source="taxon123" target="taxon128">
+      <data key="d1">0.011182959551815681</data>
+    </edge>
+    <edge source="taxon124" target="taxon125">
+      <data key="d1">0.006629211500403294</data>
+    </edge>
+    <edge source="taxon124" target="taxon126">
+      <data key="d1">0.006629211500403294</data>
+    </edge>
+    <edge source="taxon124" target="taxon127">
+      <data key="d1">0.006629211500403294</data>
+    </edge>
+    <edge source="taxon128" target="taxon129">
+      <data key="d1">0.00130112797028747</data>
+    </edge>
+    <edge source="taxon130" target="taxon131">
+      <data key="d1">0.2690792850871365</data>
+    </edge>
+    <edge source="taxon131" target="taxon133">
+      <data key="d1">0.13710125402312395</data>
+    </edge>
+    <edge source="taxon131" target="taxon134">
+      <data key="d1">0.20306955394190473</data>
+    </edge>
+    <edge source="taxon132" target="taxon133">
+      <data key="d1">0.1732557947782587</data>
+    </edge>
+    <edge source="taxon135" target="taxon156">
+      <data key="d1">0.2976764080857574</data>
+    </edge>
+    <edge source="taxon135" target="taxon137">
+      <data key="d1">0.28660446210350077</data>
+    </edge>
+    <edge source="taxon136" target="taxon137">
+      <data key="d1">0.28660446210350077</data>
+    </edge>
+    <edge source="taxon137" target="taxon140">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon137" target="taxon141">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon137" target="taxon153">
+      <data key="d1">0.29189860173321935</data>
+    </edge>
+    <edge source="taxon138" target="taxon140">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon139" target="taxon140">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon140" target="taxon142">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon140" target="taxon143">
+      <data key="d1">0.00010000666725930752</data>
+    </edge>
+    <edge source="taxon144" target="taxon150">
+      <data key="d1">0.24693381164756645</data>
+    </edge>
+    <edge source="taxon144" target="taxon147">
+      <data key="d1">0.2239393098608012</data>
+    </edge>
+    <edge source="taxon145" target="taxon147">
+      <data key="d1">0.024392393779170046</data>
+    </edge>
+    <edge source="taxon145" target="taxon146">
+      <data key="d1">0.0031064243755013444</data>
+    </edge>
+    <edge source="taxon147" target="taxon149">
+      <data key="d1">0.002403848211711252</data>
+    </edge>
+    <edge source="taxon147" target="taxon148">
+      <data key="d1">0.004412957369231037</data>
+    </edge>
+    <edge source="taxon150" target="taxon153">
+      <data key="d1">0.27598249777287953</data>
+    </edge>
+    <edge source="taxon150" target="taxon151">
+      <data key="d1">0.19084667592872778</data>
+    </edge>
+    <edge source="taxon151" target="taxon152">
+      <data key="d1">0.007335758891329055</data>
+    </edge>
+    <edge source="taxon153" target="taxon154">
+      <data key="d1">0.03176320540539769</data>
+    </edge>
+    <edge source="taxon155" target="taxon156">
+      <data key="d1">0.2765606438797512</data>
+    </edge>
+    <edge source="taxon155" target="taxon157">
+      <data key="d1">0.2765606438797512</data>
+    </edge>
+    <edge source="taxon156" target="taxon161">
+      <data key="d1">0.36630902169681795</data>
+    </edge>
+    <edge source="taxon158" target="taxon159">
+      <data key="d1">0.5962188350299725</data>
+    </edge>
+    <edge source="taxon159" target="taxon161">
+      <data key="d1">0.39912207086559137</data>
+    </edge>
+    <edge source="taxon160" target="taxon164">
+      <data key="d1">0.2904242548853284</data>
+    </edge>
+    <edge source="taxon161" target="taxon162">
+      <data key="d1">0.04311590990447085</data>
+    </edge>
+    <edge source="taxon161" target="taxon163">
+      <data key="d1">0.04311590990447085</data>
+    </edge>
+    <edge source="taxon161" target="taxon164">
+      <data key="d1">0.07348530627015284</data>
+    </edge>
+    <edge source="taxon165" target="taxon169">
+      <data key="d1">0.20320066136291862</data>
+    </edge>
+    <edge source="taxon165" target="taxon166">
+      <data key="d1">0.034480599682462976</data>
+    </edge>
+    <edge source="taxon165" target="taxon167">
+      <data key="d1">0.07161264612121238</data>
+    </edge>
+    <edge source="taxon165" target="taxon168">
+      <data key="d1">0.07161264612121238</data>
+    </edge>
+    <edge source="taxon165" target="taxon170">
+      <data key="d1">0.20320066136291862</data>
+    </edge>
+    <edge source="taxon169" target="taxon171">
+      <data key="d1">0.2902769794798478</data>
+    </edge>
+    <data key="d0">621</data>
+  </graph>
+</graphml>

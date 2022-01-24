@@ -1,21 +1,36 @@
+import copy
 import random
+import nxmetis
+import pickle
 
 import numpy as np
 import networkx as nx
 
 from Bio import SeqIO
+from itertools import combinations
 from networkx import Graph
 from networkx.algorithms.tree.mst import minimum_spanning_tree
 from networkx.algorithms.components import connected_components
 from pathlib import PosixPath
 
-from scripts.python.helpers import compute_jc_distance
+from numpy.typing import NDArray
+from typing import Union, List
+
+from scripts.python import timeit
+from scripts.python.helpers import compute_pairwise_jc_distance
+from scripts.python.inference.edge_selection import *
 
 
+@timeit
+def compute_distance_matrix(fasta: PosixPath, save: bool = False):
+    """ Reads a fasta file and computes the pairwise jukes-cantor distance between the sequences
+    If wanted, a tuple of sequence names and distance matrix (seq_names, distance_matrix) can be saved as binary file.
+    The file will be called 'distance_matrix.bin' and stored at the same location as the fasta file.
 
-def compute_MST(fasta: PosixPath):
-    #FIXME: Add comments and description of the method
-
+    :param fasta: path to the fasta file
+    :param save: set to True if you want to save the distance matrix
+    :return: <(seq_names, distance_matrix)>
+    """
     # get sequences and sequence names from the provided fasta file
     seq_names = []
     sequences = []
@@ -25,17 +40,30 @@ def compute_MST(fasta: PosixPath):
 
     # compute the distance matrix from the sequences(jc distance)
     n_taxa = len(seq_names)
-    distance_matrix = np.zeros(shape=(n_taxa, n_taxa))
-    for i, seq1 in enumerate(sequences[:-1]):
-        for j, seq2 in enumerate(sequences[i+1:]):
-            jc_dist = compute_jc_distance(seq1, seq2)
-            distance_matrix[[i, j+i+1], [j+i+1, i]] = jc_dist
+    distance_matrix = compute_pairwise_jc_distance(n_taxa, sequences)
+
+    # save tuple of sequence names and distance matrix as binary file
+    if save:
+        outfile = fasta.parent / "distance_matrix.bin"
+        print(f"Distance matrix saved to {outfile}")
+        pickle.dump((seq_names, distance_matrix), outfile.open('wb'))
+
+    return seq_names, distance_matrix
+
+
+def compute_MST(distance_matrix: Union[PosixPath, NDArray], seq_names: List[str], model_name=None) -> Graph:
+    #FIXME: Add comments and description of the method
+
+    # if distance matrix is stored in a file, read it in
+    if type(distance_matrix) == PosixPath:
+        distance_matrix = np.loadtxt(distance_matrix)
 
     # create networkx graph from distance matrix
     graph = nx.from_numpy_matrix(A=distance_matrix, parallel_edges=False)
+    graph.name = model_name
 
-    #draw_network(graph)
     # rename graph nodes
+    n_taxa = distance_matrix.shape[0]
     name_mapping = {old: new for old, new in zip(range(n_taxa), seq_names)}
     nx.relabel_nodes(G=graph, mapping=name_mapping, copy=False)
 
@@ -44,7 +72,7 @@ def compute_MST(fasta: PosixPath):
     return mst
 
 
-def remove_edges(mst: Graph, n_edges: int = None, fraction: float = None, method='random'):
+def remove_edges(mst: Graph, n_edges: int = None, fraction: float = None, method='random', min_size=None) -> List[Graph]:
     """ Removes n edges from a graph. The method returns the connected components of the resulting graph (as Graph() objects)
     Either the number of edges (n_edges) or the fraction of edges (fraction) to remove has to be passed. If both are passed, n_edges is being used.
     Possible approaches to remove edges include:
@@ -55,11 +83,12 @@ def remove_edges(mst: Graph, n_edges: int = None, fraction: float = None, method
     :param n_edges:
     :param fraction:
     :param method: choose 'random', 'random_weighted' or 'by_weight'
+    :param min_size: Minimum number of nodes each resulting connected component must contain
     :return: Returns a list of Graph() objects
     """
 
     # FIXME: Make sure the output graphs are not too small (e.g. at least 3 (or n) taxa per graph)
-
+    # FIXME: Add warning if method creates a small subgraph (<3 nodes)
     if n_edges is None:
         if fraction is None:
             raise ValueError(f"Either 'n_edges' or 'fraction' has to be provided")
@@ -72,7 +101,7 @@ def remove_edges(mst: Graph, n_edges: int = None, fraction: float = None, method
     if method == 'random':
         edges_to_remove = random_selection(graph=mst, n=n_edges)
     elif method == 'random_weighted':
-        edges_to_remove = weighted_random_selection(graph=mst, n=n_edges)
+        edges_to_remove = weighted_random_selection_iteratively(graph=mst, n=n_edges)
     elif method == 'by_weight':
         edges_to_remove = select_by_weight(graph=mst, n=n_edges)
     else:
@@ -87,42 +116,6 @@ def remove_edges(mst: Graph, n_edges: int = None, fraction: float = None, method
 
     return sub_mst
 
-def random_selection(graph: Graph, n):
-    """ Randomly selects n edges from a graph """
-    edges = list(graph.edges)
-    return random.sample(edges, n)
 
-def weighted_random_selection(graph: Graph, n):
-    """ Randomly selects n edges from a graph.
-    The greater the weight of the edge, the greater the probability it will be selected
-    """
-    idx = np.arange(graph.size())
-    size = graph.size(weight='weight')      # sum of all edge weights
 
-    # compute probabilities for each edge
-    edges = []
-    p = []
-    for edge, values in graph.edges.items():
-        edges.append(edge)
-        p.append(values['weight'] / size)
 
-    # randomly choose edges to remove (weighted by edge weight)
-    idx_to_remove = np.random.choice(a=idx, size=n, p=p, replace=False)
-    edges_to_remove = [edges[i] for i in idx_to_remove]
-
-    return edges_to_remove
-
-def select_by_weight(graph: Graph, n):
-    """ Select n edges with the highest weights """
-    # get edges and their weight
-    edges = []
-    weights = []
-    for edge, values in graph.edges.items():
-        edges.append(edge)
-        weights.append(values['weight'])
-
-    # get indices of the n highest weights
-    idx_top = np.argpartition(np.array(weights), -n)[-n:]
-    edges_to_remove = [edges[i] for i in idx_top]
-
-    return edges_to_remove

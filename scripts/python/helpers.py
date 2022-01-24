@@ -3,6 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from pathlib import PosixPath
+from itertools import combinations
+
+from typing import List
+from numpy.typing import NDArray
 
 
 # currently not used
@@ -55,9 +59,11 @@ def create_parameter_file(tree_path: PosixPath, out_path: PosixPath):
                 out.write(line)
 
 
-def compute_jc_distance(seq1, seq2):
+def compute_jc_distance(seq1, seq2, seq_len):
+    """ Computes the jukes-cantor distance between two sequences
+    """
     # compute hamming distance between seq1 and seq2
-    hamming_dist = sum(ch1 != ch2 for ch1, ch2 in zip(seq1, seq2)) / len(seq1)
+    hamming_dist = sum(ch1 != ch2 for ch1, ch2 in zip(seq1, seq2)) / seq_len
 
     # compute jc corrected distance
     if hamming_dist >= 0.75:
@@ -65,11 +71,46 @@ def compute_jc_distance(seq1, seq2):
     else:
       return -3/4 * np.log(1 - 4/3 * hamming_dist)
 
+
+def compute_pairwise_jc_distance(sequences: List[str]) -> NDArray:
+    """ Creates a distance matrix of the pairwise juke-cantor distance between all sequences
+    :param sequences: List containing sequences
+    :return:
+    """
+    # Create the 'empty' distance matrix
+    n_taxa = len(sequences)
+    distance_matrix = np.zeros(shape=(n_taxa, n_taxa))
+
+    # iterate over each pair of sequences, compute jc-distance and fill matrix
+    seq_length = len(sequences[0])
+    for i, seq1 in enumerate(sequences[:-1]):
+        for j, seq2 in enumerate(sequences[i+1:]):
+            jc_dist = compute_jc_distance(seq1, seq2, seq_length)
+            distance_matrix[[i, j+i+1], [j+i+1, i]] = jc_dist
+
+    # distances = *map(compute_jc_distance, combinations(sequences, 2))
+    # distance_matrix[np.triu_indices(n_taxa, 1)] = distances
+
+    return distance_matrix
+
 def draw_network(graph):
     fig = plt.figure()
-    pos = nx.spring_layout(graph)
+    pos = nx.spectral_layout(graph)
     nx.draw(graph, pos)
-    nx.draw_networkx_labels(graph, pos)
-    nx.draw_networkx_edge_labels(graph, pos)
+    #nx.draw_networkx_labels(graph, pos)
+    #nx.draw_networkx_edge_labels(graph, pos)
     fig.show()
+
+def plot_node_degrees(graph):
+    # degree + poisson distr
+    degree_sequence = [d for _, d in graph.degree]
+    fig_degree = plt.figure()
+    plt.hist(degree_sequence, density=False, label="network")
+    plt.xlabel("degree", fontsize=12)
+    plt.ylabel("density", fontsize=12)
+    plt.legend()
+    fig_degree.tight_layout()
+    fig_degree.show()
+
+
 
