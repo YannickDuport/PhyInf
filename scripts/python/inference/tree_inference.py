@@ -1,17 +1,11 @@
-import copy
-import random
 import nxmetis
 import pickle
 
-import numpy as np
 import networkx as nx
 
 from Bio import SeqIO
-from itertools import combinations
-from networkx import Graph
-from networkx.algorithms.tree.mst import minimum_spanning_tree
-from networkx.algorithms.components import connected_components
 from pathlib import PosixPath
+from networkx.algorithms.tree.mst import minimum_spanning_tree
 
 from numpy.typing import NDArray
 from typing import Union, List
@@ -51,8 +45,17 @@ def compute_distance_matrix(fasta: PosixPath, save: bool = False):
     return seq_names, distance_matrix
 
 
-def compute_MST(distance_matrix: Union[PosixPath, NDArray], seq_names: List[str], model_name=None) -> Graph:
-    #FIXME: Add comments and description of the method
+def compute_MST(distance_matrix: Union[PosixPath, NDArray], seq_names: List[str], model_name: str = None) -> Graph:
+    """ Creates a MST from a given distance matrix.
+    From the distance matrix an undirected, weighted and fully connected graph is constructed, using NetworkX.
+    In the next step a MST is created from that graph, using NetworkX's method 'minimum_spanning_tree()'
+    Since the MST is created from a fully connected graph, Prim's algorithm is used for this last step
+
+    :param distance_matrix: Can be an n x n matrix, or a path to a binary file containing an n x n matrix
+    :param seq_names: List of strings that will be used to name the nodes (size n)
+    :param model_name: String that will be used to name the graph
+    :return:
+    """
 
     # if distance matrix is stored in a file, read it in
     if type(distance_matrix) == PosixPath:
