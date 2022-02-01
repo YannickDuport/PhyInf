@@ -1,5 +1,10 @@
 .idea
 __pycache__/
-data
+
+# data files
+data/sequences
+data/sequences_mini
+data/trees
+data/trees_mini
 
 scripts/python/test.py
